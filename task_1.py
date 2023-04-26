@@ -67,9 +67,9 @@ def generate_markdown_file(num_activities):
         f.write(markdown_content)
         # 'w' stands for write
 
+# Prompt with activity suggestions
 activity_prompt = int(input("Choose a number between 1-100?"))
 
-# Prompt with activity suggestions
 if activity_prompt < 1 or activity_prompt > 100:
     print("Invalid parameter")
     exit(0)

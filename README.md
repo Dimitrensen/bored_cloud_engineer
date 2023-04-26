@@ -1,7 +1,7 @@
 # bored_cloud_engineer
 
 A) Markdown Python script
-B) Jenkins deployment
+B) Jenkins pipeline deployment
 
 TASK 1
 ------
