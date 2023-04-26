@@ -65,7 +65,13 @@ def generate_markdown_file(num_activities):
     # Write Markdown file
     with open('activity_suggestions.md', 'w') as f:
         f.write(markdown_content)
+        # 'w' stands for write
 
+activity_prompt = int(input("Choose a number between 1-100?"))
 
-# Example usage with 10 activity suggestions
-generate_markdown_file(10)
+# Prompt with activity suggestions
+if activity_prompt < 1 or activity_prompt > 100:
+    print("Invalid parameter")
+    exit(0)
+
+generate_markdown_file(activity_prompt)
