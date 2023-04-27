@@ -4,7 +4,9 @@ import requests
 def get_activity_suggestions(num_activities):
     activities = []
     for i in range(num_activities):
+        # I make a request to the api
         response = requests.get('https://www.boredapi.com/api/activity')
+        # Am parsing the json data into a new model using a dictionary 
         activity_data = response.json()
         activity = {
             'key': i+1,
@@ -66,6 +68,7 @@ def generate_markdown_file(num_activities):
     with open('activity_suggestions.md', 'w') as f:
         f.write(markdown_content)
         # 'w' stands for write
+        # 'f' stands for file
 
 # Prompt with activity suggestions
 activity_prompt = int(input("Choose a number between 1-100?"))
