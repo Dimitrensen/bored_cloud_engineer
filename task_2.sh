@@ -16,6 +16,12 @@ docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins
 
 # Input the code as shown on the Jenkinsfile in the pipeline script section
 
+# Because we are using a public repo, I am just using a shell command git clone to clone the public repo
+
+# If we were using a private repo, we'd need to set up credentials with github keys(SSH) and use the commented section inside Jenkinsfile
+
 # Save the pipeline and run it by clicking on "Build Now" on the Jenkins dashboard
 
 # Once the build is complete, you should receive an email with a link to the build.
+
+# With this way every step is manual, however it would be recommended to use Configuration as Code, to manage Jenkins something like the plugin JCASC App.

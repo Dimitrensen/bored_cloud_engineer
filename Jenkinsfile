@@ -4,7 +4,14 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                git 'https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition'
+                script{
+        //             dir('repo') {
+        //   git url: 'https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.git',
+        //       branch: 'master',
+        //       credentialsId: 'mycredentialsId'
+        // }
+                    sh 'git clone https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.git'
+                }
             }
         }
         stage('List files') {
@@ -16,7 +23,7 @@ pipeline {
             steps {
                 emailext body: 'Click on the following link to view the build: ${BUILD_URL}',
                     subject: 'Build ${BUILD_NUMBER} finished',
-                    to: 'jussi.pollari@msd.com'
+                    to: 'dimialexiu@gmail.com'
             }
         }
     }
